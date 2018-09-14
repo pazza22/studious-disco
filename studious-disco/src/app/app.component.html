@@ -16,5 +16,12 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
+
 </ul>
 
+<select multiple>
+  <option *ngFor='let c of countryArr' [ngValue]='c.id' [attr.selected]='c.selected === true ? true : null'>{{c.name}}</option>
+</select>
+<input type="text" placeholder="Enter arrayElement to select" [(ngModel)]='valueSelected'>
+<input type="button" value="Click" (click)="updateSelect()">
+<contact></contact>
